@@ -18,7 +18,7 @@ public class Common {
         Date date = new Date(dt*1000L);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM");
         String formatted = simpleDateFormat.format(date);
-        formatted = month[Integer.parseInt(formatted)];
+        formatted = month[Integer.parseInt(formatted)-1];
         return formatted;
     }
 
