@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:visibility="visible"
+    tools:context=".TodayWeatherFragment">
+
+    <LinearLayout
+        android:id="@+id/weather_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/border_light"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_city_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="City Selector:"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="bold|italic" />
+
+            <Spinner
+                android:id="@+id/cities_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_city_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Cuenca"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_weather"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:baselineAlignBottom="true"
+            android:src="@mipmap/ic_launcher"
+            android:textAlignment="center">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DEFAULT"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="60dp"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunny"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_date_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:background="@drawable/cell"
+                    android:text="Wind => " />
+
+                <TextView
+                    android:id="@+id/txt_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="Speed: 1 Deg: 1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:textAlignment="textEnd"
+                    android:text="Pressure => " />
+
+                <TextView
+                    android:id="@+id/txt_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="1052 hpa" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:background="@drawable/cell"
+                    android:textAlignment="textEnd"
+                    android:text="Humidity => " />
+
+                <TextView
+                    android:id="@+id/txt_humidity"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="90 %" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:background="@drawable/cell"
+                    android:text="Sunrise => " />
+
+                <TextView
+                    android:id="@+id/txt_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="06:00" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:textAlignment="textEnd"
+                    android:background="@drawable/cell"
+                    android:text="Sunset => " />
+
+                <TextView
+                    android:id="@+id/txt_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="18:00" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:background="@drawable/cell"
+                    android:text="Geo coords => " />
+
+                <TextView
+                    android:id="@+id/txt_geo_coord"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/colorSecondaryLight"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="21.4 , -21.2" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Switch
+            android:id="@+id/switch_Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Forecast 7 days"
+            android:textAlignment="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_forecast"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view_pager"
+            android:layout_marginBottom="0dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+
+
+
+</RelativeLayout>
